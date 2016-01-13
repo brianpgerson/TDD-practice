@@ -65,6 +65,10 @@ subject(:towers) { TowersOfHanoi.new }
     it 'makes a move from a tower to a tower' do
       expect(towers.board).to eq([[3,2], [1], []])
     end
+
+    it 'raises an error if from_tower is nil' do
+      expect{ towers.move(4, 0) }.to raise_error
+    end
   end
 
   describe '#valid_move?' do
