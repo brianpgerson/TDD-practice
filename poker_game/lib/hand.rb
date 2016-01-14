@@ -24,8 +24,11 @@ class Hand
     @cards_in_hand.each do |el|
       dup_hash[el.val_string] << el.value
     end
-    
+
     selected = dup_hash.select { |k,v| v.length > 1 }
+  end
+
+  def straight
   end
 
 
